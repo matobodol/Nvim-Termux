@@ -44,7 +44,7 @@ setup_termux() {
 	 # setup color scheme
 	 path="https://github.com/dracula/termux/archive/master.zip"
 	 theme="dracula"
-!
+
 	 curl -L -o ~/${theme}.zip $path
 	 unzip -o ~/${theme}.zip -d ~/
 	 cp -r ~/termux-master/colors.properties ~/.termux/colors.properties
