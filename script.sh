@@ -18,8 +18,8 @@ push() {
 	[ -d "${HOME}/.config/nvim" ] && echo "chek files" && rm -rf ${REPO_LOCAL}/.config
 	[ $? -eq 0 ] && echo "update repo" && cp -r ${HOME}/.config ${REPO_LOCAL}/.config
 
-	git status
 	[ $? -eq 0 ] && git add . 
+	git status
 	[ $? -eq 0 ] && git status
 	[ $? -eq 0 ] && git commit -m "$commit"
 
