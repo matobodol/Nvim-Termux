@@ -21,10 +21,10 @@ vim.opt.wrap = false
 vim.opt.clipboard = "unnamedplus"
 
 -- Pengaturan pencarian
-vim.opt.ignorecase = true  -- Abaikan huruf besar/kecil
-vim.opt.smartcase = true   -- Aktifkan pencarian peka huruf besar jika ada huruf besar
-vim.opt.hlsearch = true    -- Sorot hasil pencarian
-vim.opt.incsearch = true   -- Tampilkan hasil pencarian secara langsung saat mengetik
+vim.opt.ignorecase = true -- Abaikan huruf besar/kecil
+vim.opt.smartcase = true  -- Aktifkan pencarian peka huruf besar jika ada huruf besar
+vim.opt.hlsearch = true   -- Sorot hasil pencarian
+vim.opt.incsearch = true  -- Tampilkan hasil pencarian secara langsung saat mengetik
 
 -- Mode kursor pada editor
 vim.opt.cursorline = true -- Sorot baris tempat kursor berada
@@ -69,7 +69,7 @@ vim.opt.updatetime = 300
 
 -- STATUS DAN TAB
 -- Menampilkan status bar di bagian bawah
-vim.opt.laststatus = 3 -- Selalu tampilkan status global
+vim.opt.laststatus = 2 -- Selalu tampilkan status global
 
 -- Tampilkan nama tab di bagian atas
 vim.opt.showtabline = 2

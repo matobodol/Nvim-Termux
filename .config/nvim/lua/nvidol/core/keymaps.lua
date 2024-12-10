@@ -27,9 +27,9 @@ vim.keymap.set('n', '<C-q>', ':q<CR>', opts)  -- Keluar
 vim.keymap.set('n', '<C-a>', ':wa<CR>', opts) -- Simpan semua file
 
 -- Navigasi buffer
-vim.keymap.set('n', '<leader>bn', ':bnext<CR>', opts)    -- Buffer berikutnya
+vim.keymap.set('n', '<leader>bn', ':bnext<CR>', opts)     -- Buffer berikutnya
 vim.keymap.set('n', '<leader>bp', ':bprevious<CR>', opts) -- Buffer sebelumnya
-vim.keymap.set('n', '<leader>bc', ':bdelete<CR>', opts) -- Buffer sebelumnya
+vim.keymap.set('n', '<leader>bc', ':bdelete<CR>', opts)   -- Buffer sebelumnya
 
 -- Mode visual: pindah indentasi sambil tetap di visual
 vim.keymap.set('v', '<', '<gv', opts)
@@ -58,3 +58,19 @@ vim.keymap.set('n', '<leader>nh', ':nohlsearch<CR>', opts)
 
 -- Mode terminal
 vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], opts)
+
+-- select all and indentasi
+vim.keymap.set("n", "<leader>in", "ggVG=<CR>", { desc = "Reindent", silent = true })
+vim.keymap.set('n', '<leader>a', ':keepjumps normal! ggVG<cr>', { desc = "Select all text in buffer", silent = true })
+
+-- go to homeline
+vim.keymap.set({ 'n', 'x', 'o' }, '<leader>h', '^')
+-- goto endline
+vim.keymap.set({ 'n', 'x', 'o' }, '<leader>l', 'g_')
+
+-- Basic clipboard interaction
+vim.keymap.set({ 'n', 'x' }, 'cp', '"+y')
+vim.keymap.set({ 'n', 'x' }, 'cv', '"+p')
+
+-- Delete text
+vim.keymap.set({ 'n', 'x' }, 'x', '"_x')
