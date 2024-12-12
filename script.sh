@@ -69,7 +69,7 @@ setup_termux() {
 	 packages=(
 		 neofetch
 		 eza
-		starship
+		 starship
 		 fish
 		 whiptail
 		 nodejs
@@ -83,6 +83,8 @@ setup_termux() {
 		 luarocks
 		 lua-language-server
 		 wget
+		 rust
+		 rust-analyzer
 	 )
 
 	 pkg install -y "${packages[@]}"
@@ -101,10 +103,10 @@ setup_termux() {
 
 msg="$(
 cat <<EOF
-Options:
-  [1] push this repo
-  [2] install repo
-select : 
+ Options:
+ [1] push this repo
+ [2] install repo
+ select : 
 EOF
 )"
 
