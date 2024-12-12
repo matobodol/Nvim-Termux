@@ -21,5 +21,5 @@ Cargo.lock
 #.idea/
 
 #nvim
-.luarc.json
+luarc.json
 lazy-lock.json
