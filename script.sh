@@ -35,7 +35,7 @@ push() {
 # INSTALL
 setup_termux() {
 	[ ! -d ~/.config ] && mkdir -p .config
-	dotfiles="nvim-termux"
+	dotfiles="termux"
 
 	git clone https://github.com/matobodol/nvim-termux ~/${dotfiles}
 	rm -rf ~/${dotfiles}/{.git/,README.md,script.sh}
@@ -69,6 +69,7 @@ setup_termux() {
 	 packages=(
 		 neofetch
 		 eza
+		starship
 		 fish
 		 whiptail
 		 nodejs
