@@ -1,4 +1,6 @@
 -- BASIC
+-- vim.o.numberwidth = 5
+vim.opt.backspace = "indent,eol,start"
 -- Menampilkan nomor baris
 vim.opt.number = true
 

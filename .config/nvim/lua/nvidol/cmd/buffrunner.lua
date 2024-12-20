@@ -25,7 +25,7 @@ local buffrunner = function()
 		},
 		--[[ RUSTLANG ]]
 		rs = {
-			run = 'cd %:h && RUSTFLAGS=\\"-Awarnings\\" cargo run -q',
+			run = 'cd %:h && RUSTFLAGS=\\"-Awarnings\\" cargo run -q --release',
 			-- delTemp = " && sleep 0.1 && cargo clean",
 		},
 		--[[ C++ ]]

@@ -33,8 +33,8 @@ M.config = function()
 	})
 
 	local keymap = vim.keymap
-	keymap.set({ 'n', }, '<leader>tp', '<cmd>BufferLineCyclePrev<cr>')
-	keymap.set({ 'n', }, '<leader>tn', '<cmd>BufferLineCycleNext<cr>')
+	keymap.set({ 'n', }, '<leader>bh', '<cmd>BufferLineCyclePrev<cr>')
+	keymap.set({ 'n', }, '<leader>bl', '<cmd>BufferLineCycleNext<cr>')
 end
 
 return M

@@ -1,13 +1,12 @@
 -- barbecue
-local M = {
-	"utilyre/barbecue.nvim",
-	event = "InsertEnter",
-	name = "barbecue",
-	version = "*",
-	dependencies = {
-		"SmiteshP/nvim-navic",
-		"nvim-tree/nvim-web-devicons", -- optional dependency
-	},
+local M = { "utilyre/barbecue.nvim" }
+M.event = "InsertEnter"
+M.name = "barbecue"
+M.version = "*"
+
+M.dependencies = {
+	"SmiteshP/nvim-navic",
+	"nvim-tree/nvim-web-devicons", -- optional dependency
 }
 
 M.config = function()
