@@ -10,7 +10,7 @@ local buffrunner = function()
 
 	local Buffer = {
 		-- HTML: Menjalankan server HTTP menggunakan Python
-		html = { run = "cd " .. get.dir .. " && python -m http.server 8000" },
+		html = { run = "cd " .. get.dir .. " && python3 -m http.server 2024" },
 
 		-- Python: Menjalankan file Python
 		py = { run = "python3 " .. get.src },
@@ -25,7 +25,9 @@ local buffrunner = function()
 		},
 		--[[ RUSTLANG ]]
 		rs = {
-			run = 'cd %:h && RUSTFLAGS=\\"-Awarnings\\" cargo run -q --release',
+			run = 'cd %:h && RUSTFLAGS=\\"-Awarnings\\" cargo run -q',
+			-- pc
+			-- run = 'cd %:h && cargo run -q',
 			-- delTemp = " && sleep 0.1 && cargo clean",
 		},
 		--[[ C++ ]]
@@ -72,9 +74,17 @@ local buffrunner = function()
 		-- Menunggu beberapa saat untuk memastikan server berjalan
 		vim.defer_fn(function()
 			-- Membuka halaman web di browser default
-			vim.fn.system("xdg-open http://localhost:8000/" .. get.name .. "." .. get.type)
+			vim.fn.system("xdg-open http://localhost:2024/" .. get.name .. "." .. get.type)
 		end, 1000) -- Menunggu 1 detik
 	end
 end
 
 vim.keymap.set('n', '<leader>x', buffrunner)
+
+-- Keymap untuk menjalankan `cargo run` di jendela terminal baru
+vim.api.nvim_set_keymap(
+	"n",
+	"<Leader>cx",
+	':term cd %:h && RUSTFLAGS=\"-Awarnings\" cargo run',
+	{ noremap = true, silent = false }
+)

@@ -2,6 +2,8 @@
 local ensure_installed = {
 	"pyright",
 	"bashls",
+	-- "lua_ls",
+	-- "rust_analyzer""
 }
 -- lsp installed by OS packages manager
 local servers = { "lua_ls" }
